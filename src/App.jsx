@@ -1,20 +1,21 @@
-import Header from './Header'; 
-import Content from './Content'; 
-import Total from './Total'; 
+import MainContent from './components/MainContent'; 
+import CurrencyHeader from './components/CurrencyHeader'; 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const App = () => {
-  const courseHeader = 'Half Stack application development';
-  const courses = [
-    {part: 'Fundamentals of React', exercises: 10},
-    {part: 'Using props to pass data', exercises: 7},
-    {part: 'State of a component', exercises: 14}
-  ];
-  
   return (
     <>
-      <Header course={courseHeader} />
-      <Content courses={courses} />
-      <Total courses={courses}/>
+    <CurrencyHeader />
+    <div className='row d-flex justify-content-center align-items-center' style={{ height: 'auto' }}>
+      <img 
+        src='./src/assets/img/familybudget.png' 
+        alt='Family Budget Logo' 
+        className='' 
+        style={{ width: '500px', objectFit: 'contain' }} 
+      />
+    </div>
+    <MainContent />
     </>
   )
 }
